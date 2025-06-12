@@ -459,13 +459,13 @@ select.form-control {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-card-border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   overflow: hidden;
   transition: box-shadow var(--duration-normal) var(--ease-standard);
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .card__body {
@@ -671,7 +671,7 @@ select.form-control {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .nav-bar .container {
@@ -900,14 +900,14 @@ select.form-control {
   max-width: 500px;
   height: auto;
   border-radius: var(--radius-base);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Tables */
 .table-container {
   overflow-x: auto;
   border-radius: var(--radius-base);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .comparison-table,
@@ -971,14 +971,24 @@ select.form-control {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: var(--space-32);
-  align-items: start;
+  align-items: center;
 }
 
 .calculator-inputs {
   background: var(--color-surface);
   padding: var(--space-24);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.calculator-inputs * {
+  flex: 1;
 }
 
 .calculator-results {
@@ -992,12 +1002,13 @@ select.form-control {
   padding: var(--space-20);
   border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-sm);
-  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
 }
 
 .result-card.free {
   border-color: var(--color-success);
+  border: 2px solid var(--color-success);
 }
 
 .result-card h4 {
@@ -1027,7 +1038,7 @@ select.form-control {
   background: var(--color-surface);
   padding: var(--space-20);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border-left: 4px solid var(--color-primary);
 }
 
@@ -1155,7 +1166,7 @@ select.form-control {
 
   .hero h1,
   .hero-subtitle {
-    display: none !important;
+    color: black;
   }
 
   .hero h1 {
@@ -1179,10 +1190,7 @@ select.form-control {
 
   /* 요약 카드 - 3컬럼 고정 */
   .hero-summary {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 8pt !important;
-    margin-bottom: 16pt !important;
+    display: none !important;
   }
 
   .summary-card {
@@ -1244,15 +1252,17 @@ select.form-control {
 
   /* 차트 그리드 - 3개를 한 페이지에 */
   .chart-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 8pt !important;
-    page-break-inside: avoid;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12pt !important;
     margin-bottom: 12pt !important;
+    page-break-inside: avoid;
   }
 
   .chart-container {
     page-break-inside: avoid !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
   }
 
   .chart-container h3 {
@@ -1264,12 +1274,16 @@ select.form-control {
 
   /* 차트 이미지 */
   .chart-image {
+    width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    page-break-inside: avoid !important;
+    max-height: 28vh !important;
+    object-fit: contain !important;
     display: block !important;
-    margin: 4pt auto !important;
-    max-height: 200pt !important;
+    margin: 0 auto 8pt auto !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   /* 테이블 스타일 */
@@ -1371,12 +1385,6 @@ select.form-control {
     box-shadow: none !important;
   }
 
-  .decision-card:nth-child(5) {
-    grid-column: 1 / -1 !important;
-    max-width: 50% !important;
-    margin: 0 auto !important;
-  }
-
   .decision-card h3 {
     color: #2980b9 !important;
     font-size: 11pt !important;
@@ -1417,6 +1425,77 @@ select.form-control {
   .hero-summary .summary-stat,
   .hero-summary .summary-card p {
     color: #000 !important;
+  }
+
+  .grid-3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    gap: 16px !important;
+    box-sizing: border-box !important;
+    align-items: stretch !important;
+  }
+
+  .grid-3>.card {
+    width: 48% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: stretch !important;
+  }
+
+  .grid-3>.card:nth-child(3) {
+    order: -1 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  #charts,
+  #charts .container,
+  #charts .chart-grid,
+  #charts .chart-container,
+  #charts .chart-image {
+    page-break-inside: avoid !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+    break-inside: avoid !important;
+    break-before: auto !important;
+    break-after: auto !important;
+  }
+
+  #charts {
+    min-height: 95vh !important;
+    overflow: hidden !important;
+  }
+
+  .features-filters {
+    display: none !important;
+  }
+
+  #features .container,
+  #features .table-container,
+  #features h2,
+  #features .features-table {
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    break-before: avoid !important;
+    break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #features .section,
+  #features .table-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 
@@ -1474,4 +1553,73 @@ select.form-control {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+@media print {
+  #charts {
+    page-break-before: always !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    min-height: 99vh !important;
+    max-height: 99vh !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  #charts .container,
+  #charts .chart-grid,
+  #charts .chart-container,
+  #charts .chart-image {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 배경색 완전 제거 및 white로 통일 */
+  body,
+  html,
+  .section,
+  .card,
+  .summary-card,
+  .table-container,
+  .features-table,
+  .comparison-table,
+  .chart-container,
+  .chart-image,
+  .decision-card,
+  .library-card,
+  .result-card,
+  .calculator-container,
+  .form-control,
+  .features-table .feature-supported,
+  .features-table .feature-not-supported,
+  .features-table .feature-partial {
+    background: white !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    /* 배경 이미지/그라데이션 등도 제거 */
+    background-image: none !important;
+    filter: none !important;
+  }
+
+  /* 테이블 헤더/셀 배경도 white로 통일 */
+  .comparison-table th,
+  .features-table th,
+  .features-table .feature-supported,
+  .features-table .feature-not-supported,
+  .features-table .feature-partial {
+    background: white !important;
+    background-color: white !important;
+    background-image: none !important;
+  }
+
+  /* 히어로, 섹션 등 그라데이션/반투명 배경 제거 */
+  .hero,
+  .section:nth-child(even),
+  .summary-card {
+    background: white !important;
+    background-color: white !important;
+    background-image: none !important;
+    filter: none !important;
+  }
 }
