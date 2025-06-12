@@ -1,4 +1,3 @@
-
 :root {
   /* Colors */
   --color-background: rgba(252, 252, 249, 1);
@@ -253,18 +252,23 @@ h6 {
 h1 {
   font-size: var(--font-size-4xl);
 }
+
 h2 {
   font-size: var(--font-size-3xl);
 }
+
 h3 {
   font-size: var(--font-size-2xl);
 }
+
 h4 {
   font-size: var(--font-size-xl);
 }
+
 h5 {
   font-size: var(--font-size-lg);
 }
+
 h6 {
   font-size: var(--font-size-md);
 }
@@ -485,43 +489,31 @@ select.form-control {
 }
 
 .status--success {
-  background-color: rgba(
-    var(--color-success-rgb, 33, 128, 141),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-success-rgb, 33, 128, 141),
+      var(--status-bg-opacity));
   color: var(--color-success);
-  border: 1px solid
-    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
+  border: 1px solid rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
 }
 
 .status--error {
-  background-color: rgba(
-    var(--color-error-rgb, 192, 21, 47),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-error-rgb, 192, 21, 47),
+      var(--status-bg-opacity));
   color: var(--color-error);
-  border: 1px solid
-    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
+  border: 1px solid rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
 }
 
 .status--warning {
-  background-color: rgba(
-    var(--color-warning-rgb, 168, 75, 47),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-warning-rgb, 168, 75, 47),
+      var(--status-bg-opacity));
   color: var(--color-warning);
-  border: 1px solid
-    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
+  border: 1px solid rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
 }
 
 .status--info {
-  background-color: rgba(
-    var(--color-info-rgb, 98, 108, 113),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-info-rgb, 98, 108, 113),
+      var(--status-bg-opacity));
   color: var(--color-info);
-  border: 1px solid
-    rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
+  border: 1px solid rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
 }
 
 /* Container layout */
@@ -538,16 +530,19 @@ select.form-control {
     max-width: var(--container-sm);
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: var(--container-md);
   }
 }
+
 @media (min-width: 1024px) {
   .container {
     max-width: var(--container-lg);
   }
 }
+
 @media (min-width: 1280px) {
   .container {
     max-width: var(--container-xl);
@@ -558,24 +553,31 @@ select.form-control {
 .flex {
   display: flex;
 }
+
 .flex-col {
   flex-direction: column;
 }
+
 .items-center {
   align-items: center;
 }
+
 .justify-center {
   justify-content: center;
 }
+
 .justify-between {
   justify-content: space-between;
 }
+
 .gap-4 {
   gap: var(--space-4);
 }
+
 .gap-8 {
   gap: var(--space-8);
 }
+
 .gap-16 {
   gap: var(--space-16);
 }
@@ -583,16 +585,20 @@ select.form-control {
 .m-0 {
   margin: 0;
 }
+
 .mt-8 {
   margin-top: var(--space-8);
 }
+
 .mb-8 {
   margin-bottom: var(--space-8);
 }
+
 .mx-8 {
   margin-left: var(--space-8);
   margin-right: var(--space-8);
 }
+
 .my-8 {
   margin-top: var(--space-8);
   margin-bottom: var(--space-8);
@@ -601,18 +607,22 @@ select.form-control {
 .p-0 {
   padding: 0;
 }
+
 .py-8 {
   padding-top: var(--space-8);
   padding-bottom: var(--space-8);
 }
+
 .px-8 {
   padding-left: var(--space-8);
   padding-right: var(--space-8);
 }
+
 .py-16 {
   padding-top: var(--space-16);
   padding-bottom: var(--space-16);
 }
+
 .px-16 {
   padding-left: var(--space-16);
   padding-right: var(--space-16);
@@ -621,6 +631,7 @@ select.form-control {
 .block {
   display: block;
 }
+
 .hidden {
   display: none;
 }
@@ -650,8 +661,7 @@ select.form-control {
 
 @font-face {
   font-family: 'FKGroteskNeue';
-  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
-    format('woff2');
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
 }
 
 /* Navigation */
@@ -834,7 +844,8 @@ select.form-control {
   gap: var(--space-16);
 }
 
-.pros h4, .cons h4 {
+.pros h4,
+.cons h4 {
   font-size: var(--font-size-md);
   margin-bottom: var(--space-8);
 }
@@ -847,13 +858,15 @@ select.form-control {
   color: var(--color-warning);
 }
 
-.pros ul, .cons ul {
+.pros ul,
+.cons ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.pros li, .cons li {
+.pros li,
+.cons li {
   padding: var(--space-4) 0;
   font-size: var(--font-size-sm);
 }
@@ -897,13 +910,15 @@ select.form-control {
   box-shadow: var(--shadow-sm);
 }
 
-.comparison-table, .features-table {
+.comparison-table,
+.features-table {
   width: 100%;
   border-collapse: collapse;
   background: var(--color-surface);
 }
 
-.comparison-table th, .features-table th {
+.comparison-table th,
+.features-table th {
   background: var(--color-primary);
   color: var(--color-btn-primary-text);
   font-weight: var(--font-weight-semibold);
@@ -912,13 +927,15 @@ select.form-control {
   border-bottom: 2px solid var(--color-primary-hover);
 }
 
-.comparison-table td, .features-table td {
+.comparison-table td,
+.features-table td {
   padding: var(--space-12) var(--space-16);
   border-bottom: 1px solid var(--color-border);
   vertical-align: top;
 }
 
-.comparison-table tr:hover, .features-table tr:hover {
+.comparison-table tr:hover,
+.features-table tr:hover {
   background: var(--color-secondary);
 }
 
@@ -1049,28 +1066,28 @@ select.form-control {
     flex-direction: column;
     gap: var(--space-12);
   }
-  
+
   .nav-bar .container {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .hero-summary {
     grid-template-columns: 1fr;
   }
-  
+
   .chart-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .calculator-container {
     grid-template-columns: 1fr;
   }
-  
+
   .pros-cons {
     grid-template-columns: 1fr;
   }
-  
+
   .features-filters {
     flex-direction: column;
   }
@@ -1080,19 +1097,19 @@ select.form-control {
   .hero {
     padding: var(--space-20) 0;
   }
-  
+
   .hero h1 {
     font-size: var(--font-size-2xl);
   }
-  
+
   .hero-subtitle {
     font-size: var(--font-size-lg);
   }
-  
+
   .section {
     padding: var(--space-20) 0;
   }
-  
+
   .calculator-results {
     grid-template-columns: 1fr;
   }
@@ -1100,56 +1117,306 @@ select.form-control {
 
 /* Print Styles */
 @media print {
-  .nav-bar {
-    display: none;
+
+  /* 기본 페이지 설정 */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-  
+
+  @page {
+    margin: 0.5cm;
+    size: A4;
+  }
+
+  body {
+    font-size: 10pt !important;
+    line-height: 1.3 !important;
+    color: #000 !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* 네비게이션 숨기기 */
+  .nav-bar {
+    display: none !important;
+  }
+
+  /* 히어로 섹션 - 배경만 흰색으로, 폰트 색상 강제 지정 제거 */
   .hero {
     background: white !important;
-    color: black !important;
-    -webkit-print-color-adjust: exact;
+    /* color: black !important; */
+    page-break-after: avoid;
+    margin-bottom: 12pt !important;
+    padding: 12pt 0 !important;
   }
-  
-  .hero h1, .hero-subtitle, .summary-card h3, .summary-stat {
-    color: black !important;
+
+  .hero h1,
+  .hero-subtitle {
+    display: none !important;
   }
-  
+
+  .hero h1 {
+    /* color: black !important; */
+    font-size: 20pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .summary-card h3 {
+    /* color: black !important; */
+    font-size: 10pt !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .summary-stat {
+    /* color: #2980b9 !important; */
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    margin-bottom: 3pt !important;
+  }
+
+  /* 요약 카드 - 3컬럼 고정 */
+  .hero-summary {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 8pt !important;
+    margin-bottom: 16pt !important;
+  }
+
   .summary-card {
     background: white !important;
-    border: 1px solid #ccc !important;
-  }
-  
-  .section {
-    page-break-inside: avoid;
-    padding: var(--space-16) 0;
-  }
-  
-  .chart-image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card {
-    border: 1px solid #ccc !important;
+    border: 1pt solid #ccc !important;
+    padding: 8pt !important;
+    border-radius: 3pt !important;
     box-shadow: none !important;
   }
-  
-  .table-container {
-    overflow: visible;
+
+  /* 섹션 스타일 */
+  .section {
+    page-break-inside: avoid;
+    padding: 12pt 0 !important;
+    margin-bottom: 10pt !important;
   }
-  
-  .comparison-table, .features-table {
-    font-size: var(--font-size-sm);
-  }
-  
-  .comparison-table th, .features-table th {
-    background: #f0f0f0 !important;
+
+  .section h2 {
     color: black !important;
-    -webkit-print-color-adjust: exact;
+    font-size: 16pt !important;
+    margin-bottom: 10pt !important;
+    border-bottom: 1pt solid #ccc !important;
+    padding-bottom: 4pt !important;
   }
-  
-  .btn {
-    display: none;
+
+  .section h3 {
+    color: black !important;
+    font-size: 12pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .section p {
+    color: #333 !important;
+    font-size: 9pt !important;
+    line-height: 1.3 !important;
+    margin-bottom: 6pt !important;
+  }
+
+  /* 카드 스타일 */
+  .card {
+    background: white !important;
+    border: 1pt solid #ccc !important;
+    box-shadow: none !important;
+    padding: 8pt !important;
+    margin-bottom: 8pt !important;
+    page-break-inside: avoid;
+  }
+
+  .card h3 {
+    color: black !important;
+    font-size: 11pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .card p {
+    color: #333 !important;
+    font-size: 9pt !important;
+  }
+
+  /* 차트 그리드 - 3개를 한 페이지에 */
+  .chart-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 8pt !important;
+    page-break-inside: avoid;
+    margin-bottom: 12pt !important;
+  }
+
+  .chart-container {
+    page-break-inside: avoid !important;
+  }
+
+  .chart-container h3 {
+    color: black !important;
+    font-size: 10pt !important;
+    margin-bottom: 4pt !important;
+    text-align: center !important;
+  }
+
+  /* 차트 이미지 */
+  .chart-image {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+    display: block !important;
+    margin: 4pt auto !important;
+    max-height: 200pt !important;
+  }
+
+  /* 테이블 스타일 */
+  .table-container {
+    overflow: visible !important;
+    page-break-inside: avoid;
+  }
+
+  .comparison-table,
+  .features-table {
+    font-size: 8pt !important;
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 10pt !important;
+  }
+
+  .comparison-table th,
+  .features-table th {
+    background: #f5f5f5 !important;
+    color: black !important;
+    font-weight: bold !important;
+    padding: 4pt !important;
+    border: 1pt solid #ccc !important;
+    text-align: left !important;
+    font-size: 8pt !important;
+  }
+
+  .comparison-table td,
+  .features-table td {
+    padding: 4pt !important;
+    border: 1pt solid #ccc !important;
+    color: #333 !important;
+    font-size: 8pt !important;
+  }
+
+  /* 특별한 셀 스타일 */
+  .features-table .feature-supported {
+    background: #e8f5e8 !important;
+    color: #2e7d2e !important;
+  }
+
+  .features-table .feature-not-supported {
+    background: #ffe8e8 !important;
+    color: #c62828 !important;
+  }
+
+  .features-table .feature-partial {
+    background: #fff3e0 !important;
+    color: #ef6c00 !important;
+  }
+
+  /* 비용계산기 숨기기 */
+  #calculator {
+    display: none !important;
+  }
+
+  /* 네비게이션에서 비용계산기 링크 숨기기 */
+  .nav-link[href="#calculator"] {
+    display: none !important;
+  }
+
+  /* 비용 계산기 */
+  .calculator-container {
+    page-break-inside: avoid;
+  }
+
+  .form-group {
+    margin-bottom: 6pt !important;
+  }
+
+  .form-group label {
+    color: black !important;
+    font-size: 9pt !important;
+    font-weight: bold !important;
+  }
+
+  .form-control {
+    border: 1pt solid #ccc !important;
+    padding: 3pt !important;
+    font-size: 9pt !important;
+    background: white !important;
+  }
+
+  /* 의사결정 가이드 - 5개 카드를 2-3 배치 */
+  .decision-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8pt !important;
+    page-break-inside: avoid;
+  }
+
+  .decision-card {
+    background: white !important;
+    border: 1pt solid #ccc !important;
+    border-left: 3pt solid #2980b9 !important;
+    padding: 8pt !important;
+    margin-bottom: 6pt !important;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  .decision-card:nth-child(5) {
+    grid-column: 1 / -1 !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;
+  }
+
+  .decision-card h3 {
+    color: #2980b9 !important;
+    font-size: 11pt !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .decision-card p {
+    font-size: 9pt !important;
+    line-height: 1.2 !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .recommended-lib {
+    background: #2980b9 !important;
+    color: white !important;
+    padding: 2pt 6pt !important;
+    border-radius: 10pt !important;
+    font-size: 8pt !important;
+    font-weight: bold !important;
+  }
+
+  /* 폰트 크기 조정 */
+  p,
+  li,
+  td {
+    font-size: 9pt !important;
+    line-height: 1.2 !important;
+  }
+
+  /* 링크 URL 표시 안 함 (프린트용) */
+  a[href]:after {
+    content: none !important;
+  }
+
+  .hero-summary,
+  .hero-summary .summary-card,
+  .hero-summary .summary-card h3,
+  .hero-summary .summary-stat,
+  .hero-summary .summary-card p {
+    color: #000 !important;
   }
 }
 
