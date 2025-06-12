@@ -903,6 +903,17 @@ select.form-control {
   box-shadow: var(--shadow-lg);
 }
 
+.chart-image.popup-image {
+  cursor: zoom-in;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.chart-image.popup-image:hover {
+  box-shadow: 0 0 0 4px #2980b933, 0 4px 32px #0006;
+  transform: scale(1.03);
+  z-index: 2;
+}
+
 /* Tables */
 .table-container {
   overflow-x: auto;
@@ -1621,4 +1632,34 @@ select.form-control {
     background-image: none !important;
     filter: none !important;
   }
+}
+
+#image-popup-layer {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+#image-popup-layer[style*="display: flex"] {
+  display: flex !important;
+}
+#image-popup-layer img {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 4px 32px #000;
+  border-radius: 12px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  padding: 8px;
+}
+#image-popup-layer {
+  cursor: zoom-out;
 }
