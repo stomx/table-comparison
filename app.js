@@ -286,3 +286,40 @@ setTimeout(() => {
     initializeTooltips();
     calculateCost(); // Initialize cost calculator with default values
 }, 100);
+
+// 이미지 레이어 팝업 기능
+(function() {
+  function showImagePopup(src, alt) {
+    var popupLayer = document.getElementById('image-popup-layer');
+    var popupImg = document.getElementById('popup-img');
+    popupImg.src = src;
+    popupImg.alt = alt || '';
+    popupLayer.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function hideImagePopup() {
+    var popupLayer = document.getElementById('image-popup-layer');
+    popupLayer.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgs = document.querySelectorAll('.popup-image');
+    imgs.forEach(function(img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        showImagePopup(img.src, img.alt);
+      });
+    });
+    var popupLayer = document.getElementById('image-popup-layer');
+    if (popupLayer) {
+      popupLayer.addEventListener('click', function(e) {
+        if (e.target === popupLayer) hideImagePopup();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (popupLayer.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
+          hideImagePopup();
+        }
+      });
+    }
+  });
+})();
